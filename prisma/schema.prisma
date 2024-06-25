@@ -1,0 +1,31 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Target {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  instagramId       String
+  instagramUsername String
+  telegramId        Int
+}
+
+model TelegramUsers {
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  telegramId       Int
+  telegramUsername String?
+}
+
+model Followings {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  telegramUsername  String
+  telegramId        Int
+  instagramUsername String
+  instagramId       String
+  followings        String[]
+  
+}

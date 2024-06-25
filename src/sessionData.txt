@@ -1,0 +1,20 @@
+[
+  {
+    "name": "sessionid",
+    "value": "1234567890abcdef",
+    "domain": ".instagram.com",
+    "path": "/",
+    "expires": 1629388478.123456,
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "csrftoken",
+    "value": "abcdefgh12345678",
+    "domain": ".instagram.com",
+    "path": "/",
+    "expires": 1629388478.123456,
+    "httpOnly": false,
+    "secure": true
+  }
+]
